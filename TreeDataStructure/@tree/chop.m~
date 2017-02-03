@@ -1,0 +1,18 @@
+function obj = chop(obj, node)
+%% CHOP  Remove the target node and all subnodes from the given tree.
+
+    iterator = obj.depthfirstiterator(node);
+    
+    % Build new parent array
+    np = obj,Parent;
+    
+    % Remove unwanted nodes
+    np ( iterator ) = [];
+    
+    % 
+    
+    
+    obj.Parent(iterator) = [];
+    obj.Node(iterator) = [];
+
+end
